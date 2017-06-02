@@ -87,7 +87,7 @@ class Asset
                 continue;
             }
 
-            $resource = preg_replace('/^'.preg_quote($type['origin_dir']).'/', $type['dist_dir'].'/' . $version, $path);
+            $resource = preg_replace('/^'.preg_quote($type['origin_dir'], '/').'/', $type['dist_dir'].'/' . $version, $path);
             $this->addHTTP2Link($resource, $extension);
 
             return $resource;
